@@ -33,6 +33,11 @@ Group BY occupation
 
 select name,sum(working_hours) as 'Total Hours' from working group by name
 
+/* Max & Min Values */
+select max(Salary) from employee_info
+
+select min(Salary) employee_info
+
 
 
 
