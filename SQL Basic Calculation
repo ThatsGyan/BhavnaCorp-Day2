@@ -1,0 +1,38 @@
+create database bhavna_corp				/*Createing DB*/
+
+use bhavna_corp
+
+/*Table Creation for employee info*/
+
+create table employee_info (name nvarchar(30), occupation nvarchar(10), working_Date numeric, working_hours numeric(20), Salary numeric(20) )
+
+select*from employee_info
+
+insert into employee_info values('Rajan Chutrvedi','IT Manager', 2020,12,80000)
+insert into employee_info values('Rahul Jangid','Engineer', 2020,18,45000)
+insert into employee_info values('Tanuj Shrivastav','QA', 2019,18,45000)
+insert into employee_info values('Vipin Gupta','sales', 2018,30000)
+insert into employee_info values('vivek singh','Engineer', 2021,12,70000)
+insert into employee_info values('Avdesh Singh','Techenical Writer, 2020,14,30000)
+insert into employee_info values('Darendra Singh',Senior Software Engineer, 2020,14,30000)
+insert into employee_info values('Malini Singh', 'HR', 2021,6,14000)
+insert into employee_info values('Rajan Chutrvedi','QA', 2022,18,40000)
+insert into employee_info values('Sandesh Raj','Engineer', 2020,12,25000)
+
+
+/*Count Function*/
+select count(*) as "Total Employee" from employee_info;  
+
+/* Group By Clause */
+
+select occupation, COUNT(name) as "Total Employee"
+FROM employee_info
+Group BY occupation
+
+/*sum*/
+
+select name,sum(working_hours) as 'Total Hours' from working group by name
+
+
+
+
